@@ -16,7 +16,7 @@ class PicturesSpider(Spider):
 
     def start_requests(self):
         #the url cl
-        url_pre = 'http://cl.5ug.pw/thread0806.php?fid=16&search=&page='
+        url_pre = 'xxxxxxx'
         #the page_number which we want to get
         for num in xrange(1, 3):
             url_end = str(num)
@@ -30,7 +30,7 @@ class PicturesSpider(Spider):
     def parse(self, response):
         sel = Selector(response)
         item = PicturesItem()
-        url_pre = 'http://cl.5ug.pw/'
+        url_pre = 'xxxxxxx'
         url_next = sel.xpath('//td[@style="padding-left:8px"]/h3/a/@href').extract()
         for url_n in url_next:
             url = url_pre + url_n
